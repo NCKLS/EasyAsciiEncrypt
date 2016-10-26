@@ -13,7 +13,9 @@ pip install git+https://github.com/NCKLS/EasyAsciiEncrypt
 Simply import the module and use the encrypt/decrypt functions to return encrypted or decrypted text.
 The function works as so...
 
+
 encrypt(plainTextHere, keyHere) -> Returns encrypted text
+
 decrypt(encryptedTextHere, keyHere) -> Returns decrypted text
 
 ```
