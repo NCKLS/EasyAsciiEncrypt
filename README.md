@@ -22,9 +22,9 @@ import EasyAsciiEncrypt
 encryptedText = EasyAsciiEncrypt.encrypt("This is plain text", "This is the key")
 decryptedText = EasyAsciiEncrypt.decrypt(encryptedText, "This is the key")
 print(encryptedText)
->>> {|} !} !tpi}r!"#z"
+>>>{|} !} !tpi}r!"#z"
 print(decryptedText)
->>> This is plain text
+>>>This is plain text
 ```
 or alternatively... (recommended)
 ```
@@ -33,7 +33,7 @@ from EasyAsciiEncrypt import *
 encryptedText = encrypt("This is plain text", "This is the key")
 decryptedText = decrypt(encryptedText, "This is the key")
 print(encryptedText)
->>> {|} !} !tpi}r!"#z"
+>>>{|} !} !tpi}r!"#z"
 print(decryptedText)
->>> This is plain text
+>>>This is plain text
 ```
