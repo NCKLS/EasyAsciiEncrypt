@@ -15,6 +15,7 @@ The function works as so...
 
 
 encrypt(plainTextHere, keyHere) -> Returns encrypted text
+
 decrypt(encryptedTextHere, keyHere) -> Returns decrypted text
 
 ```
