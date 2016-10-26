@@ -2,12 +2,14 @@
 Easily encrypt any ASCII text data with a text key.
 
 **INSTALLATION:**
+
 Open your terminal and type...
 ```
 pip install git+https://github.com/NCKLS/EasyAsciiEncrypt
 ```
 
 **USAGE:**
+
 Simply import the module and use the encrypt/decrypt functions to return encrypted or decrypted text.
 The function works as so...
 
