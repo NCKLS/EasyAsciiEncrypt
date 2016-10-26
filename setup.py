@@ -9,7 +9,7 @@ setup(
       author='Nickolas Howell',
       author_email='nickolas.howell@icloud.com',
       url='https://www.python.org/',
-      packages=find_packages(),
+      scripts=['main/EasyAsciiEncrypt'],
       include_package_data=True,
       zip_safe=False
 )
