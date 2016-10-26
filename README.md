@@ -8,10 +8,26 @@ pip install git+https://github.com/NCKLS/EasyAsciiEncrypt
 ```
 
 **USAGE:**
-```
-Import EasyAsciiEncrypt
+Simply import the module and use the encrypt/decrypt functions to return encrypted or decrypted text.
+The function works as so...
 
-encryptedText = EasyAsciiEncrypt.encrypt("This is plain text","This is the key")
+encrypt(plainTextHere, keyHere) -> Returns encrypted text
+decrypt(encryptedTextHere, keyHere) -> Returns decrypted text
+
+```
+import EasyAsciiEncrypt
+
+encryptedText = EasyAsciiEncrypt.encrypt("This is plain text", "This is the key")
+decryptedText = EasyAsciiEncrypt.decrypt(encryptedText, "This is the key")
 print(encryptedText)
-print(EasyAsciiEncrypt.decrypt(encryptedText,"This is the key"))
+print(decryptedText)
+```
+or alternatively... (recommended)
+```
+from EasyAsciiEncrypt import *
+
+encryptedText = encrypt("This is plain text", "This is the key")
+decryptedText = decrypt(encryptedText, "This is the key")
+print(encryptedText)
+print(decryptedText)
 ```
