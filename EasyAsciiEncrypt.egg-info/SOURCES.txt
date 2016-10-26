@@ -1,6 +1,0 @@
-setup.py
-EasyAsciiEncrypt.egg-info/PKG-INFO
-EasyAsciiEncrypt.egg-info/SOURCES.txt
-EasyAsciiEncrypt.egg-info/dependency_links.txt
-EasyAsciiEncrypt.egg-info/not-zip-safe
-EasyAsciiEncrypt.egg-info/top_level.txt
