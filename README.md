@@ -3,6 +3,7 @@ Easily encrypt any ASCII text data with a text key.
 Simple as that.
 
 **FEATURES:**
+
 -Incredibly easy to use! Anyone with a fundamental understanding of python can use it!
 -It adds salt to encryption/decrpytion and manages it seemlessly
 -It obfuscates all string data, and is very secure
