@@ -1,5 +1,7 @@
 __author__ = "Nickolas Howell"
 
+import random
+
 wordsUsed = {}
 product = ""
 
@@ -36,16 +38,26 @@ def errorReport():
 
     return reportMsg
 
-def encryptLetters(plain, key):
+def encryptLetters(plain, key, listLetters):
     product = ""
     for letter in plain:
         product += keyLibrary[key[letter]]
+        if letter in listLetters:
+            for i in range(0,len(listLetters)):
+                product += keyDefault[random.randrange(0,len(keyDefault) - 1)]
     return product
 
-def decryptLetters(cipher, key):
+def decryptLetters(cipher, key, listLetters):
     product = ""
+    ignore = 0
     for letter in cipher:
-        product += key[keyLibraryTwo[letter]]
+        if ignore < 1:
+            decryptedLetter = key[keyLibraryTwo[letter]]
+            product += decryptedLetter
+            if decryptedLetter in listLetters:
+                ignore = len(listLetters) + 1
+        ignore -= 1
+
     return product
 
 def processKey(key):
@@ -85,8 +97,13 @@ def encrypt(plain, givenkey):
             inputKey += key
             wordsUsed[key] = 1
 
+    noDupeKey = inputKey.split("\n")[0]  # Takes only the used part of the key, used for salt
+    noDupeList = []  # Holds string in a list, each character their own element. Easier to check for same letters.
+    for letter in noDupeKey:
+        noDupeList.append(letter)
+
     key = processKey(inputKey)  # Converts cipher into dictionary with numeric values in according order of cipher, 1-93.
-    cipherText = encryptLetters(plain, key)  # Coverts all letters into corresponding cipher letters according to order.
+    cipherText = encryptLetters(plain, key, listLetters=noDupeList)  # Coverts all letters into corresponding cipher letters according to order.
 
     return cipherText
 
@@ -106,7 +123,12 @@ def decrypt(ciphertext, givenkey):
             inputKey += key
             wordsUsed[key] = 1
 
+    noDupeKey = inputKey.split("\n")[0] # Takes only the used part of the key, used for salt
+    noDupeList = [] # Holds string in a list, each character their own element. Easier to check for same letters.
+    for letter in noDupeKey:
+        noDupeList.append(letter)
+
     key = processKeyDecrypt(inputKey)  # Takes newly created cipher and reverses text
-    plainText = decryptLetters(ciphertext, key)  # Converts all cipher letters to plain text through algorithm.
+    plainText = decryptLetters(ciphertext, key, listLetters=noDupeList)  # Converts all cipher letters to plain text through algorithm.
 
     return plainText
