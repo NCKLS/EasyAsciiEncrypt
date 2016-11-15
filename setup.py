@@ -4,7 +4,7 @@ from distutils.core import *
 
 setup(
       name='EasyAsciiEncrypt',
-      version='1.1',
+      version='1.2',
       description='Encryption module created by Nickolas',
       author='Nickolas Howell',
       author_email='nickolas.howell@icloud.com',
