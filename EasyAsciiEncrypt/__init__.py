@@ -80,7 +80,7 @@ def clearWords():
     for value in keyDefault:
         wordsUsed[value] = 0
 
-def encrypt(plain, givenkey):
+def encrypt(plain, givenkey, salt=True):
     preInputKey = givenkey
     clearWords()  # Getting ready to add characters to key
     inputKey = ""
@@ -99,15 +99,16 @@ def encrypt(plain, givenkey):
 
     noDupeKey = inputKey.split("\n")[0]  # Takes only the used part of the key, used for salt
     noDupeList = []  # Holds string in a list, each character their own element. Easier to check for same letters.
-    for letter in noDupeKey:
-        noDupeList.append(letter)
+    if salt:
+        for letter in noDupeKey:
+            noDupeList.append(letter)
 
     key = processKey(inputKey)  # Converts cipher into dictionary with numeric values in according order of cipher, 1-93.
     cipherText = encryptLetters(plain, key, listLetters=noDupeList)  # Coverts all letters into corresponding cipher letters according to order.
 
     return cipherText
 
-def decrypt(ciphertext, givenkey):
+def decrypt(ciphertext, givenkey, salt=True):
     clearWords()
     inputKey = ""
 
@@ -125,8 +126,9 @@ def decrypt(ciphertext, givenkey):
 
     noDupeKey = inputKey.split("\n")[0] # Takes only the used part of the key, used for salt
     noDupeList = [] # Holds string in a list, each character their own element. Easier to check for same letters.
-    for letter in noDupeKey:
-        noDupeList.append(letter)
+    if salt:
+        for letter in noDupeKey:
+            noDupeList.append(letter)
 
     key = processKeyDecrypt(inputKey)  # Takes newly created cipher and reverses text
     plainText = decryptLetters(ciphertext, key, listLetters=noDupeList)  # Converts all cipher letters to plain text through algorithm.
