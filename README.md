@@ -1,5 +1,12 @@
 # EasyAsciiEncrypt
 Easily encrypt any ASCII text data with a text key.
+Simple as that.
+
+**FEATURES:**
+-Incredibly easy to use! Anyone with a fundamental understanding of python can use it!
+-It adds salt to encryption/decrpytion and manages it seemlessly
+-It obfuscates all string data, and is very secure
+-You can easily tweak settings suchs as whether to add salt or not
 
 **INSTALLATION:**
 
@@ -14,9 +21,9 @@ Simply import the module and use the encrypt/decrypt functions to return encrypt
 The function works as so...
 
 
-encrypt(plainTextHere, keyHere) -> Returns encrypted text
+encrypt(plainTextHere, keyHere) -> Returns encrypted text (with salt)
 
-decrypt(encryptedTextHere, keyHere) -> Returns decrypted text
+decrypt(encryptedTextHere, keyHere) -> Returns decrypted text (removing salt)
 
 ```
 import EasyAsciiEncrypt
@@ -24,7 +31,9 @@ import EasyAsciiEncrypt
 encryptedText = EasyAsciiEncrypt.encrypt("This is plain text", "This is the key")
 decryptedText = EasyAsciiEncrypt.decrypt(encryptedText, "This is the key")
 print(encryptedText)
->>>{|} !} !tpi}r!"#z"
+>>>{+DH/hX5UJ|x>GoCMjI/}@/HR}jN#| {6O7PHrL3!2]NAXwEgU}P2(+ECAA
+>>> 2;tPXkp["!\KHJx&y50tpi}wbu4%
+>>>\(wr!na/:FP+\5"p@[C7:wJJ#KXwpY|'9{z"l1nc;]cLt
 print(decryptedText)
 >>>This is plain text
 ```
@@ -35,7 +44,24 @@ from EasyAsciiEncrypt import *
 encryptedText = encrypt("This is plain text", "This is the key")
 decryptedText = decrypt(encryptedText, "This is the key")
 print(encryptedText)
+>>>{&riZMa|ag|'fsefvb!;}{?/)fj]KD 5]"m|paDu!Ly,-ogJ:S}57b]8!dI5 @Be
+>>>y*h.e!b>n;IVQF{tpi}0`gDpFbXAr!t?7X6#N8k"$M_/4dM?L#(G)ZV*VhAz"lf&h$<V'R
+print(decryptedText)
+>>>This is plain text
+```
+
+If you would like to encrypt/decrypt text without adding salt to your encryption, simply set the salt argument to false.
+
+```
+from EasyAsciiEncrypt import *
+
+encryptedText = encrypt("This is plain text", "This is the key", salt=False)
+decryptedText = decrypt(encryptedText, "This is the key", salt=False)
+print(encryptedText)
 >>>{|} !} !tpi}r!"#z"
 print(decryptedText)
 >>>This is plain text
 ```
+
+It is reccommended you do not remove salt, as it is less secure.
+However, if you're looking to condense string size, it might be the right decision.
