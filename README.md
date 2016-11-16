@@ -5,10 +5,15 @@ Simple as that.
 **FEATURES:**
 
 -EAE is ridiculously easy to use! Anyone with a fundamental understanding of python can utilize it!
+
 -EAE adds salt to encryption/decrpytion and manages it seemlessly
+
 -EAE obfuscates all string data, and is very secure
+
 -EAE is customizable, settings can be adjusted easily.
+
 -EAE is constantly being improved!
+
 
 **INSTALLATION:**
 
@@ -16,6 +21,7 @@ Open your terminal and type...
 ```
 pip install git+https://github.com/NCKLS/EasyAsciiEncrypt
 ```
+
 
 **USAGE:**
 
