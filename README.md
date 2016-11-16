@@ -6,7 +6,7 @@ Simple as that.
 
 -EAE is ridiculously easy to use! Anyone with a fundamental understanding of python can utilize it!
 
--EAE adds salt to encryption/decrpytion and manages it seemlessly
+-EAE adds salt to encryption/decryption and manages it seamlessly
 
 -EAE obfuscates all string data, and is very secure
 
@@ -45,7 +45,7 @@ print(encryptedText)
 print(decryptedText)
 >>>This is plain text
 ```
-or alternatively... (recommended)
+alternatively... (recommended)
 ```
 from EasyAsciiEncrypt import *
 
@@ -71,5 +71,5 @@ print(decryptedText)
 >>>This is plain text
 ```
 
-It is reccommended you do not remove salt, as it is less secure.
+It is recommended you do not remove salt, as it is less secure.
 However, if you're looking to condense string size, it might be the right decision.
