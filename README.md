@@ -4,10 +4,11 @@ Simple as that.
 
 **FEATURES:**
 
--Incredibly easy to use! Anyone with a fundamental understanding of python can use it!
--It adds salt to encryption/decrpytion and manages it seemlessly
--It obfuscates all string data, and is very secure
--You can easily tweak settings suchs as whether to add salt or not
+-EAE is ridiculously easy to use! Anyone with a fundamental understanding of python can utilize it!
+-EAE adds salt to encryption/decrpytion and manages it seemlessly
+-EAE obfuscates all string data, and is very secure
+-EAE is customizable, settings can be adjusted easily.
+-EAE is constantly being improved!
 
 **INSTALLATION:**
 
@@ -22,9 +23,9 @@ Simply import the module and use the encrypt/decrypt functions to return encrypt
 The function works as so...
 
 
-encrypt(plainTextHere, keyHere) -> Returns encrypted text (with salt)
+encrypt(plainTextHere, keyHere) -> Returns encrypted text (with salt by default)
 
-decrypt(encryptedTextHere, keyHere) -> Returns decrypted text (removing salt)
+decrypt(encryptedTextHere, keyHere) -> Returns decrypted text (removing salt by default)
 
 ```
 import EasyAsciiEncrypt
