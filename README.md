@@ -8,8 +8,6 @@ Simple as that.
 
 -EAE adds salt to encryption/decryption and manages it seamlessly
 
--EAE obfuscates all string data, and is very secure
-
 -EAE is customizable, settings can be adjusted easily.
 
 -EAE is constantly being improved!
